@@ -1,17 +1,17 @@
 import React from 'react';
+import DeleteIcon from '@material-ui/icons/Delete';
+import Button from "@material-ui/core/Button";
 
 const ToDoLists = (props) => {
-
-
     return (
         <>
             <div className='todo_style'>
-                <i className="far fa-times-circle"
+                <Button fontSize='small' className='btn_2'
                     onClick={
                         () => {
                             props.onSelect(props.id)
                         }
-                    }></i>
+                    }><DeleteIcon fontSize='small' /></Button>
                 <li> {props.text} </li>
             </div>
         </>
